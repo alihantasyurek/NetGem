@@ -1,9 +1,14 @@
-import Body from "./components/Body";
-import { createBrowserRouter } from "react-router";
-import Login from "./components/Login";
+import Body from "./components/Body.jsx";
+import Login from "./components/Login.jsx";
+import store from "./redux/store.js";
+import { Provider } from "react-redux";
 
 function App() {
-  return <Body />;
+  return (
+    <Provider store={store}>
+      <Body />
+    </Provider>
+  );
 }
 
 //TODO workspaces - alt tab
