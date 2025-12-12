@@ -14,7 +14,7 @@ const useBackgroundMovie = (movieId) => {
 			if (!resp.ok) return;
 			const data = await resp.json();
 			const trailer = data?.results.find(
-				(obj) => obj?.name.toLowerCase() === "trailer",
+				(obj) => obj?.type.toLowerCase() === "trailer",
 			);
 			dispatch(addTrailerVideo(trailer?.key));
 		};

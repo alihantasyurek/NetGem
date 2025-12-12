@@ -17,6 +17,11 @@ export const API_OPTIONS = {
 };
 
 export const API_URLS = {
-	Playing:
+	PLAYING:
 		"https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1",
+	IMG_CDN: "https://image.tmdb.org/t/p/w780",
+	POPULAR: "https://api.themoviedb.org/3/movie/popular",
+	UPCOMING: "https://api.themoviedb.org/3/movie/upcoming",
+	TOP_RATED: "https://api.themoviedb.org/3/movie/top_rated",
+	POPULAR_TV: "https://api.themoviedb.org/3/tv/popular",
 };
