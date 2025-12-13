@@ -10,8 +10,11 @@ import {
   addtopratedMovies,
   addUpcomingMovies,
 } from "../redux/moviesSlice.js";
+import { useSelector } from "react-redux/alternate-renderers";
+import SearchPage from "./Search/SearchPage.jsx";
 
 const Browse = () => {
+  const showSearch = useSelector((store) => store.search.showSearch);
   useGetMovies(API_URLS.PLAYING, addNowPlayingMovies);
   useGetMovies(API_URLS.POPULAR, addPopularMovies);
   useGetMovies(API_URLS.UPCOMING, addUpcomingMovies);
@@ -21,8 +24,12 @@ const Browse = () => {
   return (
     <div>
       <Header />
-      <MainContainer />
-      <SecondaryContainer />
+      {showSearch ? <SearchPage /> : (
+        <>
+          <MainContainer />
+          <SecondaryContainer />
+        </>
+      )}
       {
         /*
         MainContainer (movieTrailer, movieTitle, movieDescription)
