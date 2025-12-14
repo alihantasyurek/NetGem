@@ -1,8 +1,10 @@
 import { useSelector } from "react-redux/alternate-renderers";
 import useBackgroundMovie from "../../utils/hooks/useBackgroundMovie.js";
+
 const VideoBackground = ({ movieId }) => {
-  const trailerKey = useSelector((store) => store.movies.trailerVideo);
   useBackgroundMovie(movieId);
+
+  const trailerKey = useSelector((store) => store.movies.trailerVideo);
   if (!trailerKey) return;
 
   return (

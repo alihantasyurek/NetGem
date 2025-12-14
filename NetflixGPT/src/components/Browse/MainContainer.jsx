@@ -5,6 +5,7 @@ import { useMemo } from "react";
 
 const MainContainer = () => {
   const movies = useSelector((store) => store.movies?.nowPlayingMovies);
+
   const mainMovie = useMemo(() => {
     if (!movies?.length) return null;
     return movies[Math.floor(Math.random() * movies.length)];
@@ -12,9 +13,9 @@ const MainContainer = () => {
 
   if (!mainMovie) return null;
 
-  //const mainMovie = movies[0];
+  //const mainMovie = movies[0]; 1180831
   const { original_title, overview, id } = mainMovie;
-  //console.log(mainMovie);
+  console.log(mainMovie);
 
   return (
     <div className="pt-[30%] bg-black md:pt-0">

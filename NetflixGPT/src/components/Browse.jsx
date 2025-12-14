@@ -6,7 +6,6 @@ import { API_URLS } from "../utils/constants.js";
 import {
   addNowPlayingMovies,
   addPopularMovies,
-  addPopularShows,
   addtopratedMovies,
   addUpcomingMovies,
 } from "../redux/moviesSlice.js";
@@ -19,7 +18,6 @@ const Browse = () => {
   useGetMovies(API_URLS.POPULAR, addPopularMovies, "popularMovies");
   useGetMovies(API_URLS.UPCOMING, addUpcomingMovies, "upcomingMovies");
   useGetMovies(API_URLS.TOP_RATED, addtopratedMovies, "topratedMovies");
-  useGetMovies(API_URLS.POPULAR_TV, addPopularShows, "popularShows");
 
   return (
     <div>

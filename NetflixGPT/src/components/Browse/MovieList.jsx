@@ -1,3 +1,4 @@
+import { Navigate } from "react-router";
 import MovieCard from "./MovieCard.jsx";
 
 const MovieList = ({ title, movies }) => {
@@ -8,7 +9,11 @@ const MovieList = ({ title, movies }) => {
       <div className="flex overflow-x-scroll py-6">
         <div className="flex shrink-0 gap-2">
           {movies.map((movie) => (
-            <MovieCard key={movie.id} backdropPath={movie.backdrop_path} />
+            <MovieCard
+              key={movie.id}
+              backdropPath={movie.backdrop_path}
+              movieId={movie.id}
+            />
           ))}
         </div>
       </div>

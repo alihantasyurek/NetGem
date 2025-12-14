@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../utils/firebase.js";
 import { useNavigate } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 import { addUser, removeUser } from "../redux/userSlice.js";
 import { LOGO } from "../utils/constants.js";
-import { toggleSearchView } from "../redux/searchSlice.js";
+import { closeSearch, toggleSearchView } from "../redux/searchSlice.js";
 import { SUPPORTED_LANGUAGES } from "../utils/languageConstants.js";
 import { changeLang } from "../redux/configSlice.js";
 
@@ -51,11 +51,13 @@ const Header = () => {
 
   return (
     <div className="absolute z-50 px-8 py-2 bg-linear-to-b from-black w-screen flex flex-col justify-between items-center md:flex-row">
-      <img
-        className="w-44"
-        alt="logo"
-        src={LOGO}
-      />
+      <div className="cursor-pointer" onClick={() => dispatch(closeSearch())}>
+        <img
+          className="w-44"
+          alt="logo"
+          src={LOGO}
+        />
+      </div>
       {user && (
         <div className="flex gap-3">
           {showSearch &&

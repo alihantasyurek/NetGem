@@ -4,18 +4,15 @@ const VideoTitle = ({ title, overview }) => {
       <div className="px-12 max-w-2xl
                 h-full flex flex-col justify-center items-center text-center
                 sm:items-start sm:text-left sm:justify-start sm:pt-[10%]">
-        <h1 className="text-lg md:text-6xl font-bold">{title}</h1>
+        <h1 className="text-lg md:text-4xl font-bold">{title}</h1>
 
-        <p className="py-6 text-md">
+        <p className="py-6 md:text-xl sm:text-md">
           {overview}
         </p>
 
         <div className="flex">
           <button className="bg-white/95 w-30 h-10 text-xl text-black rounded-lg hover:bg-white/50">
             ▶︎ Play
-          </button>
-          <button className="ml-2 bg-gray-500/70 w-30 h-10 text-xl text-white rounded-lg hover:bg-gray-500/30">
-            More Info
           </button>
         </div>
       </div>
