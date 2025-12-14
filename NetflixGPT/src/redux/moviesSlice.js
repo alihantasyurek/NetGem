@@ -44,4 +44,5 @@ export const {
 	removeMovies,
 	addtopratedMovies,
 	addPopularShows,
+	addSearchedMovies,
 } = moviesSlice.actions;

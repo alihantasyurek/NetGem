@@ -11,8 +11,7 @@ export const API_OPTIONS = {
 	method: "GET",
 	headers: {
 		accept: "application/json",
-		Authorization:
-			"Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlMGQzODYxNzEzMzE2Yjc5MTU5OWFjZWQ2MDgzNGQzOSIsIm5iZiI6MTc2NTMwNzEzNC40MTUsInN1YiI6IjY5Mzg3MmZlNzg0NDY0MjBlMGViMWQxMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.w2Qw_qY1q3xZJvtuB3gKuDMwVC4T2Ha1jkoHOBGnQa0",
+		Authorization: import.meta.env.VITE_TMBD_API,
 	},
 };
 
@@ -20,6 +19,7 @@ export const API_URLS = {
 	PLAYING:
 		"https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1",
 	IMG_CDN: "https://image.tmdb.org/t/p/w780",
+	GET_MOVIE: "https://api.themoviedb.org/3/search/movie?query=",
 	POPULAR: "https://api.themoviedb.org/3/movie/popular",
 	UPCOMING: "https://api.themoviedb.org/3/movie/upcoming",
 	TOP_RATED: "https://api.themoviedb.org/3/movie/top_rated",

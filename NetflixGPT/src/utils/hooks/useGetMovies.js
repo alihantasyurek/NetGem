@@ -9,7 +9,7 @@ const useGetMovies = (URL, reducer) => {
 		if (!response.ok) return;
 		const json = await response.json();
 		dispatch(reducer(json.results));
-		console.log(json);
+		//console.log(json);
 	};
 
 	useEffect(() => {

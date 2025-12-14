@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@google/genai": "^1.33.0",
     "@reduxjs/toolkit": "^2.11.1",
     "firebase": "^12.6.0",
     "react": "^19.2.0",

@@ -61,7 +61,7 @@ const Header = () => {
           {showSearch &&
             (
               <select
-                className="p-2 m-2 bg-gray-900/30 text-white"
+                className="p-2 m-2 bg-black/30 text-white"
                 onChange={handleLanguageChange}
               >
                 {SUPPORTED_LANGUAGES.map((lang) => (
