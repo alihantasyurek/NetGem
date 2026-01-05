@@ -4,6 +4,7 @@ export default async (request, context) => {
   try {
     const key = process.env.TMDB_API_KEY;
     if (!key) return new Response("Invalid TMDB KEY", { status: 500 });
+    console.log("TMDB KEY PRESENT:", Boolean(process.env.TMDB_API_KEY));
 
     //get the endpoint
     const url = new URL(request.url);
