@@ -9,6 +9,5 @@ export default async (prompt) => {
     throw new Error(await res.text());
   }
 
-  console.log("THE RES INSIDE GENERATE ANSWER: ", res);
   return res.text();
 };

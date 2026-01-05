@@ -3,7 +3,10 @@ import VideoBackground from "./VideoBackground.jsx";
 import VideoTitle from "./VideoTitle.jsx";
 import { useMemo } from "react";
 
+import tmdb from "../../utils/tmdb.js";
+
 const MainContainer = () => {
+  window.tmdb = tmdb;
   const movies = useSelector((store) => store.movies?.nowPlayingMovies);
 
   const mainMovie = useMemo(() => {
@@ -15,7 +18,6 @@ const MainContainer = () => {
 
   //const mainMovie = movies[0]; 1180831
   const { original_title, overview, id } = mainMovie;
-  console.log(mainMovie);
 
   return (
     <div className="pt-[30%] bg-black md:pt-0">

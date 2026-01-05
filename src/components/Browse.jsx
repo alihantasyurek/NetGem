@@ -22,14 +22,15 @@ const Browse = () => {
   return (
     <div>
       <Header />
-      {showSearch ? <SearchPage /> : (
+      {showSearch ? (
+        <SearchPage />
+      ) : (
         <>
           <MainContainer />
           <SecondaryContainer />
         </>
       )}
-      {
-        /*
+      {/*
         MainContainer (movieTrailer, movieTitle, movieDescription)
           - VideoBackground
           - VideoTitle
@@ -37,8 +38,7 @@ const Browse = () => {
           - MovieList * N
             - cards * n
 
-      */
-      }
+      */}
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router";
-import { API_URLS } from "../../utils/constants";
-const MovieCard = ({ backdropPath, movieId}) => {
+import { IMG_CDN } from "../../utils/constants";
+const MovieCard = ({ backdropPath, movieId }) => {
   const navigate = useNavigate();
   if (!backdropPath) return;
 
@@ -9,11 +9,7 @@ const MovieCard = ({ backdropPath, movieId}) => {
       className="cursor-pointer hover:opacity-85 "
       onClick={() => navigate(`/watch/${movieId}`)}
     >
-      <img
-        src={API_URLS.IMG_CDN + backdropPath}
-        alt="movie poster"
-        width="240"
-      />
+      <img src={IMG_CDN + backdropPath} alt="movie poster" width="240" />
     </div>
   );
 };
